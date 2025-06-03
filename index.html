@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado pela sua Compra!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Cor principal de destaque (não usada ativamente sem o botão, mas mantida para referência) */
+        .bg-brand-primary {
+            background-color: #1e293b; /* Azul escuro/ardósia - slate-800 */
+        }
+        .text-brand-primary {
+            color: #1e293b;
+        }
+        .border-brand-primary {
+            border-color: #1e293b;
+        }
+        .hover-bg-brand-primary-dark:hover {
+            background-color: #161e2b; /* Um tom um pouco mais escuro para hover - slate-900 (aproximado) */
+        }
+
+        /* Ajustes para o tema escuro */
+        /*
+           Card: #334155 (slate-700)
+           Página: #0f172a (slate-900)
+        */
+    </style>
+</head>
+<body class="bg-slate-900 flex flex-col items-center justify-center min-h-screen p-6">
+    <!-- Card Principal -->
+    <div class="bg-slate-700 shadow-2xl rounded-xl p-8 md:p-12 w-full max-w-lg text-center">
+        <!-- Ícone de Sucesso -->
+        <div class="mx-auto mb-6 bg-green-500 rounded-full h-20 w-20 flex items-center justify-center">
+            <svg class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </div>
+
+        <!-- Título Principal -->
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-100 mb-4">
+            Obrigado pela sua compra!
+        </h1>
+
+        <!-- Mensagem de Confirmação -->
+        <p class="text-gray-300 text-lg mb-8">
+            Agradecemos a sua preferência. Um e-mail com os detalhes e próximos passos foi enviado para você.
+        </p>
+
+        <!-- Próximos Passos / O que esperar (Simplificado) -->
+        <div class="mb-8 text-left">
+            <h3 class="text-xl font-semibold text-gray-200 mb-3">O que acontece agora?</h3>
+            <ul class="list-disc list-inside text-gray-300 space-y-2">
+                <li>Verifique sua caixa de entrada (e pasta de spam/lixo eletrônico) para o nosso e-mail de confirmação.</li>
+                <li>Se adquiriu acesso a algum conteúdo digital, as instruções estarão no e-mail.</li>
+            </ul>
+        </div>
+
+        <!-- Botão de Ação Único REMOVIDO
+        <div class="mt-10">
+            <a href="https://destravaprova.shop"
+               class="w-full sm:w-auto bg-brand-primary hover-bg-brand-primary-dark text-white font-semibold py-3 px-8 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1e293b]">
+                Continuar Navegando
+            </a>
+        </div>
+        -->
+
+        <!-- Rodapé Simples -->
+        <p class="text-xs text-slate-400 mt-12">
+            Se tiver alguma dúvida, não hesite em nos contatar.
+            <br>
+            &copy; <span id="currentYear"></span> Destrava Prova. Todos os direitos reservados.
+        </p>
+    </div>
+
+    <script>
+        // Script para o ano atual no rodapé
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
